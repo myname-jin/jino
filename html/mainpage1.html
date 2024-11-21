@@ -3,57 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--<link rel="stylesheet" href="/css/">-->
-
   <title>Image Links</title>
-  <link rel="stylesheet" href="cssfirst.css">
+  <link rel="stylesheet" href="cssfirst.css"> <!-- 외부 CSS 파일 연결 -->
 </head>
 <body>
   <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
-}
+    /* 인라인 스타일 */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
 
-.container {
-  display: flex;
-  flex-direction: row;  /* 한 줄에 나란히 배치 */
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap; /* 줄바꿈 방지 */
-}
+    .container {
+      display: flex;
+      flex-direction: row;  /* 한 줄에 나란히 배치 */
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap; /* 줄바꿈 방지 */
+    }
 
-.image-container {
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
+    .image-container {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
 
-.image-container img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-}
+    .image-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
 
-.image-container p {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 10px;
-  text-transform: uppercase;
-  color: #333;
-}
+    .image-container p {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-transform: uppercase;
+      color: #333;
+    }
 
-.image-container:hover {
-  transform: scale(1.05);
-}
-
+    .image-container:hover {
+      transform: scale(1.05);
+    }
   </style>
+
   <div class="container">
     <div class="image-container" id="men">
       <img src="images/Men.png" alt="Men">
@@ -64,16 +63,21 @@ body {
       <p>WOMEN</p>
     </div>
   </div>
+
   <script>
- document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function () {
+  // "MEN" 버튼 클릭 시 naver.com으로 이동
   document.getElementById('men').addEventListener('click', function () {
     window.location.href = 'https://naver.com'; // 현재 창에서 naver.com으로 이동
   });
 
+  // "WOMEN" 버튼 클릭 시 Mainpage.html로 이동
   document.getElementById('women').addEventListener('click', function () {
-    window.location.href = 'https://daum.net'; // 현재 창에서 daum.net으로 이동
+    window.location.href = 'Mainpage.html'; // 현재 창에서 Mainpage.html로 이동
   });
 });
- </script>
+
+
+  </script>
 </body>
 </html>
