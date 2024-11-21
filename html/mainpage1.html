@@ -3,13 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="stylesheet" href="/css/cssfirst.css">
-  <script src="/js/jscode.js"></script>
+  <title>Men and Women Selection</title>
+  <style>
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-  <title>Men and Women Selection </title>
- 
+    /* 각 이미지 영역 */
+    .image-section {
+      flex: 1;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin: 0 10px; /* 이미지 간의 여백 설정 */
+    }
+
+    /* 호버 시 약간 확대 효과 */
+    .image-section:hover {
+      transform: scale(1.05);
+    }
+
+    /* 이미지 스타일 */
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+  <script>
+    function goToPage(target) {
+      if (target === 'men') {
+        window.location.href = 'placeholder-men.html';
+      } else if (target === 'women') {
+        window.location.href = 'placeholder-women.html';
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="image-container">
@@ -20,10 +53,8 @@
 
     <!-- 여자 영역 이미지 -->
     <div class="image-section women-area" onclick="goToPage('women')">
-<img src="images/Woman.png" alt="Women">
+      <img src="images/Woman.png" alt="Women">
     </div>
   </div>
-
- 
 </body>
 </html>
