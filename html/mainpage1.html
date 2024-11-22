@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Mall</title>
-  <link rel="stylesheet" href="cssfirst.css"> <!-- 외부 CSS 파일 연결 -->
+  <link rel="stylesheet" href="cssfirst.css">
   <style>
     body {
       margin: 0;
@@ -13,86 +13,140 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+      background: linear-gradient(to bottom, rgba(240, 240, 240, 0.3), rgba(255, 255, 255, 0.3)), 
+        url('images/firstBacground.png') no-repeat center center fixed;
+      background-size: cover;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
-      gap: 40px; /* 카드 간 간격 확대 */
+      flex-direction: row; /* 버튼과 이미지 패널을 가로로 나란히 배치 */
+      gap: 40px; /* 버튼과 이미지 패널 간의 간격 확대 */
       justify-content: center;
       align-items: center;
+      width: 100%;
+      max-width: 1200px;
       padding: 20px;
-      flex-wrap: wrap; /* 창 크기에 따라 자동으로 줄바꿈 */
     }
 
-    .image-container {
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
-      overflow: hidden;
-      text-align: center;
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .button {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
       cursor: pointer;
+      border-radius: 15px;
       transition: transform 0.3s, box-shadow 0.3s;
-      width: 320px; /* 카드 너비 */
+      width: 200px;
     }
 
-    .image-container:hover {
+    .button:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .image-container img {
-      width: 100%;
+    .right-panel {
+      width: 400px;
       height: auto;
-      display: block;
+      display: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out; /* 페이드 인 효과 추가 */
     }
 
-    .image-container p {
-      margin: 0;
-      padding: 15px 10px;
+    .right-panel img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .right-panel-text {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: white;
+      padding: 15px 0;
       font-size: 24px;
       font-weight: bold;
       text-transform: uppercase;
-      color: #444;
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
-      color: white;
-      border-top: 1px solid #e0e0e0;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 30px;
-      font-weight: bold;
-      color: #333;
+      margin: 0;
+      border-radius: 0 0 15px 15px;
     }
   </style>
 </head>
 <body>
-  <div>
-    <div class="container">
-      <div class="image-container" id="men">
-        <img src="images/Men.png" alt="Men">
-        <p>MEN</p>
-      </div>
-      <div class="image-container" id="women">
-        <img src="images/Woman.png" alt="Women">
-        <p>WOMEN</p>
-      </div>
+  <!-- 전체 컨테이너를 중앙에 위치 -->
+  <div class="container">
+    <!-- 왼쪽의 버튼 컨테이너 -->
+    <div class="button-container">
+      <button class="button" id="men-button">MEN</button>
+      <button class="button" id="women-button">WOMEN</button>
+    </div>
+
+    <!-- 오른쪽에 큰 이미지를 표시할 패널 -->
+    <div class="right-panel" id="right-panel">
+      <img src="" alt="Full View" id="right-panel-image">
+      <p class="right-panel-text" id="right-panel-text">TEXT</p>
     </div>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // "MEN" 버튼 클릭 시 naver.com으로 이동
-      document.getElementById('men').addEventListener('click', function () {
-        window.location.href = 'https://naver.com'; // 현재 창에서 naver.com으로 이동
+      const menButton = document.getElementById('men-button');
+      const womenButton = document.getElementById('women-button');
+      const rightPanel = document.getElementById('right-panel');
+      const rightPanelImage = document.getElementById('right-panel-image');
+      const rightPanelText = document.getElementById('right-panel-text');
+
+      // 이미지 패널 업데이트 함수
+      function updateImage(imageSrc, text) {
+        if (rightPanel.style.display === 'block') {
+          // 이미 패널이 표시된 경우, 페이드 아웃 후 이미지 변경
+          rightPanel.style.opacity = '0';
+          setTimeout(() => {
+            rightPanelImage.src = imageSrc; // 새 이미지 설정
+            rightPanelText.textContent = text; // 텍스트 설정
+            rightPanel.style.opacity = '1'; // 페이드 인 효과
+          }, 1000); // 페이드 아웃 후 이미지 변경 시간
+        } else {
+          // 패널이 처음 표시될 경우
+          rightPanelImage.src = imageSrc; // 이미지 설정
+          rightPanelText.textContent = text; // 텍스트 설정
+          rightPanel.style.display = 'block'; // 패널 보이기
+          setTimeout(() => {
+            rightPanel.style.opacity = '1'; // 페이드 인 효과
+          }, 10);
+        }
+      }
+
+      // "WOMEN" 버튼 클릭 시 오른쪽에 이미지 표시
+      womenButton.addEventListener('click', function () {
+        updateImage('images/Woman.png', 'WOMEN'); // WOMEN 상세 이미지와 텍스트 설정
       });
 
-      // "WOMEN" 버튼 클릭 시 Mainpage.html로 이동
-      document.getElementById('women').addEventListener('click', function () {
-        window.location.href = '../html/Main/Mainpage.html'; // 현재 창에서 Mainpage.html로 이동
+      // "MEN" 버튼 클릭 시 오른쪽에 이미지 표시
+      menButton.addEventListener('click', function () {
+        updateImage('images/men.png', 'MEN'); // MEN 상세 이미지와 텍스트 설정
+      });
+
+      // 오른쪽에 표시된 이미지 클릭 시 페이지 이동
+      rightPanelImage.addEventListener('click', function () {
+        if (rightPanelImage.src.includes('Men.png')) {
+          window.location.href = 'https://naver.com'; // MEN 이미지 클릭 시 이동
+        } else if (rightPanelImage.src.includes('Woman.png')) {
+          window.location.href = '../html/Main/Mainpage.html'; // WOMEN 이미지 클릭 시 이동
+        }
       });
     });
   </script>
