@@ -132,7 +132,7 @@
 
       // "WOMEN" 버튼 클릭 시 오른쪽에 이미지 표시
       womenButton.addEventListener('click', function () {
-        updateImage('images/Woman.png', 'WOMEN'); // WOMEN 상세 이미지와 텍스트 설정
+        updateImage('images/Women.png', 'WOMEN'); // WOMEN 상세 이미지와 텍스트 설정
       });
 
       // "MEN" 버튼 클릭 시 오른쪽에 이미지 표시
@@ -144,7 +144,7 @@
       rightPanelImage.addEventListener('click', function () {
         if (rightPanelImage.src.includes('Men.png')) {
           window.location.href = 'https://naver.com'; // MEN 이미지 클릭 시 이동
-        } else if (rightPanelImage.src.includes('Woman.png')) {
+        } else if (rightPanelImage.src.includes('Women.png')) {
           window.location.href = '../html/Main/Mainpage.html'; // WOMEN 이미지 클릭 시 이동
         }
       });
