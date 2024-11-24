@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (src === 'men.png') {
         window.location.href = 'https://naver.com';
       } else if (src === 'women.png') {
-        window.location.href = '../html/Main/Mainpage.html';
+        window.location.href = '../html/woman/womanmain.html';
       }
     });
   });
