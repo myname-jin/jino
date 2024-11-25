@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- 최상단 검은색 네비게이션 바 -->
+    <div class="navbar">
+        <div class="menu-btn" onclick="openMenu()">三</div>
+        <div class="login-btn" onclick="goToLogin()">Login</div>
+    </div>
+
+    <!-- 오버레이 메뉴 -->
+    <div id="overlay-menu" class="overlay">
+        <span class="closebtn" onclick="closeMenu()">&times;</span>
+        <div class="menu-items">
+       	  <p onclick="goToPage('../wishlist/wishlist.html')">위시 리스트</p>
+      	  <p onclick="goToPage('minimal.html')">미니멀</p>
+    	  <p onclick="goToPage('casual.html')">캐쥬얼</p>
+     	  <p onclick="goToPage('formal.html')">포멀</p>
+      	  <p onclick="goToPage('street.html')">스트릿</p>
+        </div>
+    </div>
+
+    <!-- "Fashion		 X		 Fashion" 바 -->
+    <div class="fashion-title">
+        <h1>Fashion</h1>
+        <h1>X</h1>
+        <h1>Fashion</h1>
+    </div>
+
+    <!-- 이미지 캐러셀 섹션 -->
+    <div class="carousel">
+        <div class="slides" id="slides">
+            <div class="slide">
+                <img src="images/main1man.png" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="images/main2man.png" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="images/main3man.png" alt="Image 3">
+            </div>
+        </div>
+        <div class="indicators">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- 텍스트와 이미지 섹션 -->
+    <div class="text-image-section">
+        <div class="text-area">
+            <h2>Aestrel</h2>
+            <p>Aestrel은 2000년대 초반, 도시적 감성과 자연의 조화를 </p>
+            <p>모티브로 탄생한 컨템포러리 패션 브랜드입니다.</p>
+            <p>유려한 실루엣과 정교한 디테일로 미니멀리즘을 재해석하며,</p>
+            <p>모든 컬렉션은 지속 가능한 소재와 장인의 섬세한 손길로 제작됩니다.</p>
+        </div>
+        <div class="image-area">
+            <img src="images/sub1.png" alt="Image 4">
+            <img src="images/sub2.png" alt="Image 5">
+            <img src="images/sub3.png" alt="Image 6">
+            <img src="images/sub4.png" alt="Image 7">
+            <img src="images/sub5.png" alt="Image 8">
+            <img src="images/sub6.png" alt="Image 9">
+        </div>
+    </div>
+
+    <!-- 하단 검은색 바 -->
+    <div class="footer-bar">
+        <div>
+            <p>회사 위치: 부산광역시 동의대역 동의대</p>
+            <p>전화번호: 010-1234-5678</p>
+            <p>이메일: contact@fashion.com</p>
+        </div>
+    </div>
+
+</body>
+</html>
