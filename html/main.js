@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 남성 섹션 클릭 시
   menSection.addEventListener("click", function () {
-      fadeOut(menSection, "../html/men_main/men_main.html"); // 원하는 URL로 변경
+      fadeOut(menSection, "../men_main/men_main.html"); // 원하는 URL로 변경
   });
 
   // 여성 섹션 클릭 시
   womenSection.addEventListener("click", function () {
-      fadeOut(womenSection, "../html/women_main/women_main.html"); // 원하는 URL로 변경
+      fadeOut(womenSection, "../women_main/women_main.html"); // 원하는 URL로 변경
   });
 
   function fadeOut(section, targetUrl) {
