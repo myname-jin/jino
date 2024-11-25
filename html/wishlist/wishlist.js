@@ -1,3 +1,33 @@
+// 오버레이 메뉴 열기 함수
+function openMenu() {
+    document.getElementById("overlay-menu").style.width = "250px";
+}
+
+// 오버레이 메뉴 닫기 함수
+function closeMenu() {
+    document.getElementById("overlay-menu").style.width = "0";
+}
+
+// 로그인 화면으로 이동
+function goToLogin() {
+    window.location.href = '../login/login.html'; // 로그인 화면 경로
+}
+
+// 페이지로 이동
+function goToPage(page) {
+    window.location.href = page; // 해당 페이지로 경로 설정
+}
+
+// 오버레이 메뉴 열기 함수
+function openMenu() {
+    document.getElementById("overlay-menu").style.width = "250px";
+}
+
+// 오버레이 메뉴 닫기 함수
+function closeMenu() {
+    document.getElementById("overlay-menu").style.width = "0";
+}
+
 // 예제 데이터: 찜한 이미지 목록
 const wishlistData = [
     { id: 1, image: 'https://via.placeholder.com/200', title: 'Outfit 1' },

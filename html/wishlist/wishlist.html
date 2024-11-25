@@ -7,9 +7,30 @@
     <link rel="stylesheet" href="wishlist.css">
 </head>
 <body>
-    <header>
-        <h1>My Wishlist</h1>
-    </header>
+    <!-- 최상단 검은색 네비게이션 바 -->
+    <div class="navbar">
+        <div class="menu-btn" onclick="openMenu()">三</div>
+        <div class="login-btn" onclick="goToLogin()">Login</div>
+    </div>
+
+    <!-- 오버레이 메뉴 -->
+    <div id="overlay-menu" class="overlay">
+        <span class="closebtn" onclick="closeMenu()">&times;</span>
+        <div class="menu-items">
+        	<p onclick="goToPage('wishlist.html')">위시 리스트</p>
+        	<p onclick="goToPage('minimal.html')">미니멀</p>
+        	<p onclick="goToPage('casual.html')">캐쥬얼</p>
+        	<p onclick="goToPage('formal.html')">포멀</p>
+        	<p onclick="goToPage('street.html')">스트릿</p>
+        </div>
+    </div>
+
+    <!-- "Fashion		 X		 Fashion" 바 -->
+    <div class="fashion-title">
+        <h1>Fashion</h1>
+        <h1>X</h1>
+        <h1>Fashion</h1>
+    </div>
     <main>
         <div class="wishlist-container">
             <!-- 찜한 이미지가 동적으로 추가될 영역 -->
