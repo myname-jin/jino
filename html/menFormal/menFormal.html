@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fashion Coordination</title>
   <link rel="stylesheet" href="menFormal.css">
+  <script defer src="menFormal.js"></script>
+
 </head>
+
 <body>
+  <!-- 최상단 검은색 네비게이션 바 -->
+  <div class="navbar">
+    <div class="menu-btn" onclick="openMenu()">三</div>
+    <div class="login-btn" onclick="goToLogin()">Login</div>
+  </div>
+
+  <!-- 오버레이 메뉴 -->
+  <div id="overlay-menu" class="overlay">
+    <span class="closebtn" onclick="closeMenu()">&times;</span>
+    <div class="menu-items">
+      <p onclick="goToPage('../wishlist/wishlist.html')">Wishlist</p>
+      <p onclick="goToPage('../menMini/menMini.html')">Minimal</p>
+      <p onclick="goToPage('../menCasual/menCasual.html')">Casual</p>
+      <p onclick="goToPage('../menFormal/menFormal.html')">Formal</p>
+      <p onclick="goToPage('../menStreet/menStreet.html')">Street</p>
+    </div>
+  </div>
   <div class="container">
     <!-- 코디 1 -->
     <div class="coordination coordination-1">
@@ -75,4 +96,5 @@
     </div>
   </div>
 </body>
+
 </html>

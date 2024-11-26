@@ -1,3 +1,75 @@
+/* 최상단 검은색 네비게이션 바 */
+.navbar {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+}
+
+/* 로그인 버튼 스타일 */
+.login-btn {
+    color: white;
+    font-size: 18px;
+    margin-left: auto; /* 오른쪽 끝으로 정렬 */
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.login-btn:hover {
+    color: #f1f1f1;
+}
+
+/* 메뉴 버튼 스타일 */
+.menu-btn {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 오버레이 메뉴 스타일 */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s; /* 열고 닫는 속도 설정 */
+    padding-top: 60px;
+}
+
+/* 오버레이 메뉴 닫기 버튼 */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 오버레이 메뉴 항목 */
+.overlay .menu-items p {
+    padding: 20px;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.overlay .menu-items p:hover {
+    color: #f1f1f1;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Google Fonts 활용 */
@@ -14,7 +86,6 @@ body {
 }
 
 .coordination {
-
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
@@ -30,7 +101,7 @@ body {
 }
 
 .left-panel {
-    width: 36%;
+    width: 50%;
     padding: 20px;
     display: flex;
     justify-content: center;

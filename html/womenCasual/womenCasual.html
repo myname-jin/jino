@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fashion Coordination</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="womenCasual.css">
+  <script defer src="womenCasual.js"></script>
+
 </head>
+
 <body>
+  <!-- 최상단 검은색 네비게이션 바 -->
+  <div class="navbar">
+    <div class="menu-btn" onclick="openMenu()">三</div>
+    <div class="login-btn" onclick="goToLogin()">Login</div>
+  </div>
+
+  <!-- 오버레이 메뉴 -->
+  <div id="overlay-menu" class="overlay">
+    <span class="closebtn" onclick="closeMenu()">&times;</span>
+    <div class="menu-items">
+      <p onclick="goToPage('../wishlist/wishlist.html')">Wishlist</p>
+      <p onclick="goToPage('../womenMini/womenMini.html')">Minimal</p>
+      <p onclick="goToPage('../womenCasual/womenCasual.html')">Casual</p>
+      <p onclick="goToPage('../womenFormal/womenFormal.html')">Formal</p>
+      <p onclick="goToPage('../womenStreet/womenStreet.html')">Street</p>
+    </div>
+  </div>
+
   <div class="container">
     <!-- 코디 1 -->
     <div class="coordination coordination-1">
       <div class="left-panel">
-        <img src="casualfull1.jpg" alt="Coordination 1" class="coordination-image">
+        <img src="images/casualfull1.jpg" alt="Coordination 1" class="coordination-image">
       </div>
       <div class="right-panel">
         <div class="product">
-          <img src="casualT1.jpg" alt="Product 1">
+          <img src="images/casualT1.jpg" alt="Product 1">
           <div class="product-info">
             <h3>하리보 니트 후드집업</h3>
             <p>Brand: 오프버티</p>
@@ -23,7 +45,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="casualPants1.jpg" alt="Product 2">
+          <img src="images/casualPants1.jpg" alt="Product 2">
           <div class="product-info">
             <h3>소브 플라워 패딩 팬츠</h3>
             <p>Brand: 오프버티</p>
@@ -31,7 +53,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="casualOut1.jpg" alt="Product 3">
+          <img src="images/casualOut1.jpg" alt="Product 3">
           <div class="product-info">
             <h3>럼블 부클 하프 울코트</h3>
             <p>Brand: 오프버티</p>
@@ -44,11 +66,11 @@
     <!-- 코디 2 -->
     <div class="coordination coordination-2">
       <div class="left-panel">
-        <img src="casualFull2.jpg" alt="Coordination 2" class="coordination-image">
+        <img src="images/casualFull2.jpg" alt="Coordination 2" class="coordination-image">
       </div>
       <div class="right-panel">
         <div class="product">
-          <img src="casualT2.jpg" alt="Product 4">
+          <img src="images/casualT2.jpg" alt="Product 4">
           <div class="product-info">
             <h3>구스 네모단추 떡볶이 크롭패딩</h3>
             <p>Brand: 러브앤드팝</p>
@@ -56,7 +78,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="casualPants2.jpg" alt="Product 5">
+          <img src="images/casualPants2.jpg" alt="Product 5">
           <div class="product-info">
             <h3>샌드 캣 와이드팬츠</h3>
             <p>Brand: 러브앤드팝</p>
@@ -64,7 +86,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="casualOut2.jpg" alt="Product 6">
+          <img src="images/casualOut2.jpg" alt="Product 6">
           <div class="product-info">
             <h3>뽀글 양면트루퍼</h3>
             <p>Brand: 러브앤드팝</p>
@@ -75,4 +97,5 @@
     </div>
   </div>
 </body>
+
 </html>
