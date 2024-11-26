@@ -1,3 +1,4 @@
+/* Reset 기본 스타일 설정 */
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +30,7 @@ body {
     display: flex;
     align-items: center; /* 수직 중앙 정렬 */
     justify-content: center; /* 수평 중앙 정렬 */
+    transition: opacity 1s ease-in-out; /* 전환 효과 */
 }
 
 .section img {
@@ -54,13 +56,19 @@ body {
     color: #ffffff;
 }
 
-/* 작은 화면에서 세로 정렬 */
+/* 작은 화면에서도 가로 정렬 유지 */
 @media (max-width: 768px) {
     .main-container {
-        flex-direction: column; /* 작은 화면에서 위아래 정렬 */
+        flex-direction: row; /* 작은 화면에서도 가로 정렬 유지 */
     }
 
     .overlay-text {
         font-size: 2rem; /* 작은 화면에서 텍스트 크기 줄이기 */
     }
+}
+
+/* 페이드아웃 효과 추가 */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* 페이드아웃 애니메이션 */
 }
