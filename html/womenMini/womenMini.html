@@ -21,16 +21,20 @@
   <div id="overlay-menu" class="overlay">
     <span class="closebtn" onclick="closeMenu()">&times;</span>
     <div class="menu-items">
-      <p onclick="goToPage('../wishlist/wishlist.html')">Wishlist</p>
-      <p onclick="goToPage('minimal.html')">Minimal</p>
-      <p onclick="goToPage('casual.html')">Casual</p>
-      <p onclick="goToPage('formal.html')">Formal</p>
-      <p onclick="goToPage('street.html')">Street</p>
+      <p onclick="goToPage('../womenwishlist/wishlist.html')">Wishlist</p>
+      <p onclick="goToPage('../womenMini/womenMini.html')">Minimal</p>
+      <p onclick="goToPage('../womenCasual/womenCasual.html')">Casual</p>
+      <p onclick="goToPage('../womenFormal/womenFormal.html')">Formal</p>
+      <p onclick="goToPage('../womenStreet/womenStreet.html')">Street</p>
     </div>
   </div>
   <div class="container">
     <!-- 코디 1 -->
     <div class="coordination coordination-1">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/miniFull1.jpg', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
       <div class="left-panel">
         <img src="images/minifull1.jpg" alt="Coordination 1" class="coordination-image">
       </div>
@@ -64,6 +68,10 @@
 
     <!-- 코디 2 -->
     <div class="coordination coordination-2">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/miniFull2.jpg', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
       <div class="left-panel">
         <img src="images/miniFull2.jpg" alt="Coordination 2" class="coordination-image">
       </div>
