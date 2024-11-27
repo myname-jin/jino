@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fashion Coordination</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="menFormal.css">
+  <script defer src="menFormal.js"></script>
+
 </head>
+
 <body>
+  <!-- 최상단 검은색 네비게이션 바 -->
+  <div class="navbar">
+    <div class="menu-btn" onclick="openMenu()">三</div>
+    <div class="login-btn" onclick="goToLogin()">Login</div>
+  </div>
+
+  <!-- 오버레이 메뉴 -->
+  <div id="overlay-menu" class="overlay">
+    <span class="closebtn" onclick="closeMenu()">&times;</span>
+    <div class="menu-items">
+      <p onclick="goToPage('../menwishlist/wishlist.html')">Wishlist</p>
+      <p onclick="goToPage('../menMini/menMini.html')">Minimal</p>
+      <p onclick="goToPage('../menCasual/menCasual.html')">Casual</p>
+      <p onclick="goToPage('../menFormal/menFormal.html')">Formal</p>
+      <p onclick="goToPage('../menStreet/menStreet.html')">Street</p>
+    </div>
+  </div>
   <div class="container">
     <!-- 코디 1 -->
     <div class="coordination coordination-1">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/formalFull1.png', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
       <div class="left-panel">
-        <img src="formalFull1.png" alt="Coordination 1" class="coordination-image">
+        <img src="images/formalFull1.png" alt="Coordination 1" class="coordination-image">
       </div>
       <div class="right-panel">
         <div class="product">
-          <img src="formalT1.png" alt="Product 1">
+          <img src="images/formalT1.png" alt="Product 1">
           <div class="product-info">
             <h3>오버핏 니트 반폴라티</h3>
             <p>Brand: 스네지</p>
@@ -23,7 +48,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="formalPants1.png" alt="Product 2">
+          <img src="images/formalPants1.png" alt="Product 2">
           <div class="product-info">
             <h3>핀턱 와이드슬랙스 구김없는 링클프리 세미와이드 스판 슬랙스</h3>
             <p>Brand: 스네지</p>
@@ -31,7 +56,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="formalOut1.png" alt="Product 3">
+          <img src="images/formalOut1.png" alt="Product 3">
           <div class="product-info">
             <h3>빅사이즈 오버핏 싱글코트</h3>
             <p>Brand: 스네지</p>
@@ -43,12 +68,16 @@
 
     <!-- 코디 2 -->
     <div class="coordination coordination-2">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/formalFull2.png', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
       <div class="left-panel">
-        <img src="formalFull2.png" alt="Coordination 2" class="coordination-image">
+        <img src="images/formalFull2.png" alt="Coordination 2" class="coordination-image">
       </div>
       <div class="right-panel">
         <div class="product">
-          <img src="formalT2.png" alt="Product 4">
+          <img src="images/formalT2.png" alt="Product 4">
           <div class="product-info">
             <h3>시그니처 사계절 데일리 셔츠</h3>
             <p>Brand: 컬러필름</p>
@@ -56,7 +85,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="formalPants2.png" alt="Product 5">
+          <img src="images/formalPants2.png" alt="Product 5">
           <div class="product-info">
             <h3>베이직 롱 세미와이드 슬랙스</h3>
             <p>Brand: 컬러필름</p>
@@ -64,7 +93,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="formalOut2.png" alt="Product 6">
+          <img src="images/formalOut2.png" alt="Product 6">
           <div class="product-info">
             <h3>시그니처 블레이저 자켓</h3>
             <p>Brand: 컬러필름</p>
@@ -75,4 +104,5 @@
     </div>
   </div>
 </body>
+
 </html>

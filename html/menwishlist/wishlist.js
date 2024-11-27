@@ -18,51 +18,68 @@ function goToPage(page) {
     window.location.href = page; // 해당 페이지로 경로 설정
 }
 
-// 오버레이 메뉴 열기 함수
-function openMenu() {
-    document.getElementById("overlay-menu").style.width = "250px";
-}
-
-// 오버레이 메뉴 닫기 함수
-function closeMenu() {
-    document.getElementById("overlay-menu").style.width = "0";
-}
-
-// 예제 데이터: 찜한 이미지 목록
-const wishlistData = [
-    { id: 1, image: 'https://via.placeholder.com/200', title: 'Outfit 1' },
-    { id: 2, image: 'https://via.placeholder.com/200', title: 'Outfit 2' },
-    { id: 3, image: 'https://via.placeholder.com/200', title: 'Outfit 3' },
-    { id: 4, image: 'https://via.placeholder.com/200', title: 'Outfit 4' }
-];
-
 // 찜 목록 컨테이너 가져오기
 const wishlistContainer = document.querySelector('.wishlist-container');
 
-// 찜 목록 렌더링 함수
+// Wishlist 데이터를 로컬 스토리지에서 가져오기
+const WISHLIST_STORAGE_KEY = 'wishlistItems';
+
+// Wishlist 데이터를 가져오는 함수
+function getWishlist() {
+    return JSON.parse(localStorage.getItem(WISHLIST_STORAGE_KEY)) || [];
+}
+
+// Wishlist에 데이터 추가
 function renderWishlist() {
-    wishlistContainer.innerHTML = ''; // 초기화
-    wishlistData.forEach(item => {
+    const wishlist = getWishlist();
+    wishlistContainer.innerHTML = ''; // 기존 항목 초기화
+
+    wishlist.forEach((item, index) => {
         const wishlistItem = document.createElement('div');
         wishlistItem.className = 'wishlist-item';
-        
+
+        // 이미지 경로 확인 및 디버깅용 콘솔 출력
+        console.log("Item image path:", item.image);
+
         wishlistItem.innerHTML = `
-            <img src="${item.image}" alt="${item.title}">
+            <img src="${item.image}" alt="${item.title}" style="width: 100px; height: 100px;">
             <p>${item.title}</p>
-            <button onclick="removeFromWishlist(${item.id})">Remove</button>
+            <button onclick="removeFromWishlist(${index})">Remove</button>
         `;
+        
         wishlistContainer.appendChild(wishlistItem);
     });
 }
 
-// 찜 목록에서 제거하는 함수
-function removeFromWishlist(id) {
-    const index = wishlistData.findIndex(item => item.id === id);
-    if (index !== -1) {
-        wishlistData.splice(index, 1);
-        renderWishlist();
-    }
+// Wishlist에서 아이템 제거
+function removeFromWishlist(index) {
+    const wishlist = getWishlist();
+    wishlist.splice(index, 1);  // 해당 아이템 삭제
+    localStorage.setItem(WISHLIST_STORAGE_KEY, JSON.stringify(wishlist));
+    renderWishlist();  // 변경된 위시리스트 다시 렌더링
 }
 
-// 초기 렌더링
-renderWishlist();
+// 위시리스트에 아이템 추가 (예시 코드)
+function addItemToWishlist() {
+    const wishlistItem = {
+        image: "images/casualFull1.png",  // 대소문자 맞춰서 수정된 이미지 경로
+        title: "Outfit 1"
+    };
+
+    // 로컬 스토리지에서 현재 위시리스트 가져오기
+    const wishlist = getWishlist();
+
+    // 새로운 아이템을 위시리스트에 추가
+    wishlist.push(wishlistItem);
+
+    // 업데이트된 위시리스트를 로컬 스토리지에 저장
+    localStorage.setItem(WISHLIST_STORAGE_KEY, JSON.stringify(wishlist));
+
+    // 위시리스트 다시 렌더링
+    renderWishlist();
+}
+
+// 페이지 로드 시 렌더링
+document.addEventListener('DOMContentLoaded', renderWishlist);
+
+// 예시로, "Add to Wishlist" 버튼에 addItemToWishlist 함수를 연결할 수 있습니다.

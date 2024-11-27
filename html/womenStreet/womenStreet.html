@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Coordination</title>
+  <link rel="stylesheet" href="womenStreet.css">
+  <script defer src="womenStreet.js"></script>
+
+</head>
+
+<body>
+  <!-- 최상단 검은색 네비게이션 바 -->
+  <div class="navbar">
+    <div class="menu-btn" onclick="openMenu()">三</div>
+    <div class="login-btn" onclick="goToLogin()">Login</div>
+  </div>
+
+  <!-- 오버레이 메뉴 -->
+  <div id="overlay-menu" class="overlay">
+    <span class="closebtn" onclick="closeMenu()">&times;</span>
+    <div class="menu-items">
+      <p onclick="goToPage('../womenwishlist/wishlist.html')">Wishlist</p>
+      <p onclick="goToPage('../womenMini/womenMini.html')">Minimal</p>
+      <p onclick="goToPage('../womenCasual/womenCasual.html')">Casual</p>
+      <p onclick="goToPage('../womenFormal/womenFormal.html')">Formal</p>
+      <p onclick="goToPage('../womenStreet/womenStreet.html')">Street</p>
+    </div>
+  </div>
+  <div class="container">
+    <!-- 코디 1 -->
+    <div class="coordination coordination-1">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/streetFull1.jpg', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
+      <div class="left-panel">
+        <img src="images/streetfull1.jpg" alt="Coordination 1" class="coordination-image">
+      </div>
+      <div class="right-panel">
+        <div class="product">
+          <img src="images/streetT1.jpg" alt="Product 1">
+          <div class="product-info">
+            <h3>CIRCLE FRILL SLEEVE T</h3>
+            <p>Brand: 아케</p>
+            <p>Price: 29,500원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/streetPants1.jpg" alt="Product 2">
+          <div class="product-info">
+            <h3>PARACHUTE NYLON PT</h3>
+            <p>Brand: 아케</p>
+            <p>Price: 43,770원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/streetOut1.jpg" alt="Product 3">
+          <div class="product-info">
+            <h3>CHECK PATCH CROP PADDING</h3>
+            <p>Brand: 아케</p>
+            <p>Price: 67,230원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 코디 2 -->
+    <div class="coordination coordination-2">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/streetFull2.jpg', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
+      <div class="left-panel">
+        <img src="images/streetFull2.jpg" alt="Coordination 2" class="coordination-image">
+      </div>
+      <div class="right-panel">
+        <div class="product">
+          <img src="images/streetT2.jpg" alt="Product 4">
+          <div class="product-info">
+            <h3>KALE STRIPE LONG SLEEVE</h3>
+            <p>Brand: 릿킴</p>
+            <p>Price: 36,000원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/streetPants2.jpg" alt="Product 5">
+          <div class="product-info">
+            <h3>CARPENTER SWEAT PANTS</h3>
+            <p>Brand: 릿킴</p>
+            <p>Price: 55,000원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/streetOut2.jpg" alt="Product 6">
+          <div class="product-info">
+            <h3>TUTTLE PADDING</h3>
+            <p>Brand: 릿킴</p>
+            <p>Price: 103,000원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

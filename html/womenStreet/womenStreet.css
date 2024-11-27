@@ -1,0 +1,246 @@
+.coordination {
+    position: relative; /* 버튼이 코디 내부에서만 위치하도록 설정 */
+  }
+  
+/* wishlist-container: 버튼 위치 조정 */
+.wishlist-container {
+    position: absolute;
+    top: 40px; /* 기존보다 아래로 내리기 */
+    right: 10px; /* 우측 정렬 유지 */
+    z-index: 10;
+    text-align: center; /* 버튼과 텍스트를 중앙 정렬 */
+  }
+  
+  /* wishlist-btn: 버튼 크기 조정 */
+  .wishlist-btn {
+    font-size: 24px; /* 버튼 크기 키우기 */
+    width: 50px; /* 버튼의 가로 크기 */
+    height: 50px; /* 버튼의 세로 크기 */
+    border: none;
+    border-radius: 50%; /* 둥근 버튼 유지 */
+    background-color: #f5f5f5; /* 버튼 배경색 */
+    color: #888; /* 텍스트 색상 */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 살짝의 그림자 추가 */
+    transition: all 0.2s ease-in-out; /* 클릭 시 부드러운 효과 */
+  }
+  
+  /* 버튼이 눌렸을 때 스타일 */
+  .wishlist-btn.active {
+    background-color: #ff6b6b; /* 빨간색 배경 */
+    color: white; 
+  }
+  
+  /* wishlist-label: 텍스트 위치 */
+  .wishlist-label {
+    display: block;
+    margin-top: 8px; /* 버튼과 텍스트 간격 조정 */
+    font-size: 14px; /* 텍스트 크기 */
+    color: #666; /* 텍스트 색상 */
+  }
+
+/* 최상단 검은색 네비게이션 바 */
+.navbar {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+}
+
+/* 로그인 버튼 스타일 */
+.login-btn {
+    color: white;
+    font-size: 18px;
+    margin-left: auto; /* 오른쪽 끝으로 정렬 */
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.login-btn:hover {
+    color: #f1f1f1;
+}
+
+/* 메뉴 버튼 스타일 */
+.menu-btn {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 오버레이 메뉴 스타일 */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s; /* 열고 닫는 속도 설정 */
+    padding-top: 60px;
+}
+
+/* 오버레이 메뉴 닫기 버튼 */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 오버레이 메뉴 항목 */
+.overlay .menu-items p {
+    padding: 20px;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.overlay .menu-items p:hover {
+    color: #f1f1f1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Google Fonts 활용 */
+    background: linear-gradient(135deg, #f5f5f5, #e2e2e2); /* 부드러운 그라데이션 배경 */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.coordination {
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* 배경 색상 */
+    transition: all 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+.coordination:hover {
+    transform: translateY(-10px); /* 마우스를 올리면 살짝 위로 올라가는 효과 */
+}
+
+.left-panel {
+    width: 36%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+}
+
+.left-panel img {
+    width: 100%; /* 부모 요소의 너비에 맞게 조정 */
+    height: auto; /* 높이를 자동으로 설정하여 비율 유지 */
+    max-height: 800px; /* 최대 높이 설정 */
+    object-fit: cover; /* 이미지를 비율에 맞게 잘라서 부모 요소에 꽉 맞춤 */
+    border-radius: 10px;
+}
+
+.right-panel {
+    width: 50%;
+    padding: 20px;
+}
+
+.product {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05); /* 제품에 마우스를 올리면 살짝 커지는 효과 */
+}
+
+.product img {
+    width: 170px; /* 고정된 너비 */
+    height: 170px; /* 고정된 높이 */
+    margin-right: 20px;
+    border-radius: 12px;
+    object-fit: cover; /* 비율에 맞게 잘라서 부모 요소에 꽉 맞춤 */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #777;
+}
+
+.product-info p:first-child {
+    color: #555;
+}
+
+.product-info p:last-child {
+    color: #e74c3c; /* 가격 강조 */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .coordination {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-panel {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .product img {
+        width: 150px; /* 모바일에서의 고정된 너비 */
+        height: 150px; /* 모바일에서의 고정된 높이 */
+    }
+
+    .product-info h3 {
+        font-size: 18px;
+    }
+
+    .product-info p {
+        font-size: 14px;
+    }
+}
