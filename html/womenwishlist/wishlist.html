@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css">
+</head>
+<body>
+    <!-- 최상단 검은색 네비게이션 바 -->
+    <div class="navbar">
+        <div class="menu-btn" onclick="openMenu()">三</div>
+        <div class="login-btn" onclick="goToLogin()">Login</div>
+    </div>
+
+    <!-- 오버레이 메뉴 -->
+    <div id="overlay-menu" class="overlay">
+        <span class="closebtn" onclick="closeMenu()">&times;</span>
+        <div class="menu-items">
+        	<p onclick="goToPage('../womenwishlist/wishlist.html')">Wishlist</p>
+        	<p onclick="goToPage('../womenmini/index.html')">Minimal</p>
+        	<p onclick="goToPage('../womencasual/index.html')">Casual</p>
+        	<p onclick="goToPage('../womenformal/index.html')">Formal</p>
+        	<p onclick="goToPage('../womenstreet/index.html')">Street</p>
+        </div>
+    </div>
+
+    <!-- "Fashion		 X		 Fashion" 바 -->
+    <div class="fashion-title">
+        <h1>Fashion</h1>
+        <h1>X</h1>
+        <h1>Fashion</h1>
+    </div>
+    <main>
+        <div class="wishlist-container">
+            <!-- 찜한 이미지가 동적으로 추가될 영역 -->
+        </div>
+    </main>
+    <script src="wishlist.js"></script>
+</body>
+</html>
