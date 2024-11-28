@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Coordination</title>
+  <link rel="stylesheet" href="menMini.css">
+  <script defer src="menMini.js"></script>
+</head>
+
+<body>
+  <!-- 최상단 검은색 네비게이션 바 -->
+  <div class="navbar">
+    <div class="menu-btn" onclick="openMenu()">三</div>
+    <div class="login-btn" onclick="goToLogin()">Login</div>
+  </div>
+
+  <!-- 오버레이 메뉴 -->
+  <div id="overlay-menu" class="overlay">
+    <span class="closebtn" onclick="closeMenu()">&times;</span>
+    <div class="menu-items">
+      <p onclick="goToPage('../menwishlist/wishlist.html')">Wishlist</p>
+      <p onclick="goToPage('../menMini/menMini.html')">Minimal</p>
+      <p onclick="goToPage('../menCasual/menCasual.html')">Casual</p>
+      <p onclick="goToPage('../menFormal/menFormal.html')">Formal</p>
+      <p onclick="goToPage('../menStreet/menStreet.html')">Street</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 코디 1 -->
+    <div class="coordination coordination-1">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/miniFull1.png', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
+      <div class="left-panel">
+        <img src="images/minifull1.png" alt="Coordination 1" class="coordination-image">
+      </div>
+      <div class="right-panel">
+        <div class="product">
+          <img src="images/miniT1.png" alt="Product 1">
+          <div class="product-info">
+            <h3>오버핏 루즈핏 구김없는 편한 스판 밑단트임 기본 쭉 티 티셔츠</h3>
+            <p>Brand: 자시가</p>
+            <p>Price: 20,000원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/miniPants1.png" alt="Product 2">
+          <div class="product-info">
+            <h3>스판 허리 반 밴딩 슬림 일자 핏 9부 편한 바지 팬츠</h3>
+            <p>Brand: 자시가</p>
+            <p>Price: 35,900원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/miniOut1.png" alt="Product 3">
+          <div class="product-info">
+            <h3>남자 겨울 누빔 울 숏 반크롭 미니멀 카라 투웨이지퍼 자켓</h3>
+            <p>Brand: 자시가</p>
+            <p>Price: 69,800원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 코디 2 -->
+    <div class="coordination coordination-2">
+      <div class="wishlist-container">
+        <button class="wishlist-btn" onclick="addToWishlist('images/miniFull2.png', 'Outfit')">♡</button> <!-- 수정된 부분 -->
+        <span class="wishlist-label">wish</span>
+      </div>
+      <div class="left-panel">
+        <img src="images/miniFull2.png" alt="Coordination 2" class="coordination-image">
+      </div>
+      <div class="right-panel">
+        <div class="product">
+          <img src="images/miniT2.png" alt="Product 4">
+          <div class="product-info">
+            <h3>데일리 오버핏 빅카라 와이셔츠</h3>
+            <p>Brand: 히코튼</p>
+            <p>Price: 25,500원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/miniPants2.png" alt="Product 5">
+          <div class="product-info">
+            <h3>스탠다드 와이드 데님 워싱 청바지 진청 흑청 팬츠</h3>
+            <p>Brand: 베이직바이블</p>
+            <p>Price: 35,800원</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/miniOut2.png" alt="Product 6">
+          <div class="product-info">
+            <h3>라운드 케이블 꽈배기 오버핏 부드러운 니트 가디건</h3>
+            <p>Brand: 베이직바이블</p>
+            <p>Price: 39,900원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

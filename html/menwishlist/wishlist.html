@@ -7,35 +7,36 @@
     <link rel="stylesheet" href="wishlist.css">
 </head>
 <body>
-    <!-- 최상단 검은색 네비게이션 바 -->
+    <!-- 네비게이션 바 및 메뉴 -->
     <div class="navbar">
         <div class="menu-btn" onclick="openMenu()">三</div>
         <div class="login-btn" onclick="goToLogin()">Login</div>
     </div>
-
-    <!-- 오버레이 메뉴 -->
     <div id="overlay-menu" class="overlay">
         <span class="closebtn" onclick="closeMenu()">&times;</span>
         <div class="menu-items">
-        	<p onclick="goToPage('../menwishlist/wishlist.html')">Wishlist</p>
-        	<p onclick="goToPage('../menmini/index.html')">Minimal</p>
-        	<p onclick="goToPage('../mencasual/index.html')">Casual</p>
-        	<p onclick="goToPage('../menformal/index.html')">Formal</p>
-        	<p onclick="goToPage('../menstreet/index.html')">Street</p>
+            <p onclick="goToPage('../menwishlist/wishlist.html')">Wishlist</p>
+            <p onclick="goToPage('../menMini/menMini.html')">Minimal</p>
+            <p onclick="goToPage('../menCasual/menCasual.html')">Casual</p>
+            <p onclick="goToPage('../menFormal/menFormal.html')">Formal</p>
+            <p onclick="goToPage('../menStreet/menStreet.html')">Street</p>
         </div>
     </div>
 
-    <!-- "Fashion		 X		 Fashion" 바 -->
+    <!-- "Fashion X Fashion" 제목 -->
     <div class="fashion-title">
         <h1>Fashion</h1>
         <h1>X</h1>
         <h1>Fashion</h1>
     </div>
+
+    <!-- 위시리스트 아이템이 표시될 영역 -->
     <main>
         <div class="wishlist-container">
             <!-- 찜한 이미지가 동적으로 추가될 영역 -->
         </div>
     </main>
+
     <script src="wishlist.js"></script>
 </body>
 </html>
