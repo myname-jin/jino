@@ -9,7 +9,7 @@ function closeMenu() {
 }
 
 // 로그인 화면으로 이동
-function goToLogin() {
+function goToLogout() {
     window.location.href = '../login/login.html'; // 로그인 화면 경로
 }
 
