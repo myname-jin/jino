@@ -1,3 +1,21 @@
+.home-btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* 초록색 배경 */
+    color: white; /* 흰색 텍스트 */
+    border: none;
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer;
+    margin-right: 10px; /* 오른쪽 여백 */
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .home-btn:hover {
+    background-color: #45a049; /* 호버 시 조금 더 진한 초록색 */
+    transform: scale(1.05); /* 살짝 확대 */
+  }
+
 .coordination {
     position: relative; /* 버튼이 코디 내부에서만 위치하도록 설정 */
   }
