@@ -9,8 +9,8 @@ function closeMenu() {
 }
 
 // 로그인 화면으로 이동
-function goToLogout() {
-    window.location.href = '../login/login.html'; // 로그인 화면 경로
+function goToLogin() {
+    window.location.href = '../mainpage1.html'; // 로그인 화면 경로
 }
 
 // 페이지로 이동
