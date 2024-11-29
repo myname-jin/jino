@@ -12,13 +12,14 @@
     <!-- 최상단 검은색 네비게이션 바 -->
     <div class="navbar">
         <div class="menu-btn" onclick="openMenu()">三</div>
-        <div class="login-btn" onclick="goToLogin()">Login</div>
+        <div class="login-btn" onclick="goToLogin()">Logout</div>
     </div>
 
     <!-- 오버레이 메뉴 -->
     <div id="overlay-menu" class="overlay">
         <span class="closebtn" onclick="closeMenu()">&times;</span>
         <div class="menu-items">
+            <p onclick="goToPage('../men_main/men_main.html')">Home</p>
         	<p onclick="goToPage('../menwishlist/wishlist.html')">Wishlist</p>
             <p onclick="goToPage('../menMini/menMini.html')">Minimal</p>
             <p onclick="goToPage('../menCasual/menCasual.html')">Casual</p>

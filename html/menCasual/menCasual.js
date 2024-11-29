@@ -10,7 +10,7 @@ function closeMenu() {
 
 // 로그인 화면으로 이동
 function goToLogin() {
-    window.location.href = '../login/login.html'; // 로그인 화면으로 경로 설정
+    window.location.href = '../mainpage1.html'; // 로그인 화면으로 경로 설정
 }
 
 // 페이지로 이동

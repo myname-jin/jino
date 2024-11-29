@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login/login.css">
+
+    <title>Login</title>      
+    <style>
+        .signup-btn {
+            display: block;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+        }
+        .signup-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>FashionCody</h2>
+        <p class="subtitle">Find your style, express yourself.</p>
+        <form action="login.jsp" method="post">
+            <table>
+                <tr>
+                    <td class="label"><label for="userid">ID</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="userid" name="userid" placeholder="Enter your ID" required></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="password">Password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="password" name="password" placeholder="Enter your password" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Login</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <!-- 회원가입 버튼 -->
+        <button class="signup-btn" onclick="goToSignup()">회원가입</button>
+    </div>
+
+    <script>
+        function goToSignup() {
+            window.location.href = "signup.html"; // 회원가입 페이지 경로 설정
+        }
+    </script>
+</body>
+</html>
