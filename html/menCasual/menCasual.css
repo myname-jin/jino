@@ -173,10 +173,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.product:hover {
-    transform: scale(1.05); /* 제품에 마우스를 올리면 살짝 커지는 효과 */
-}
-
 .product img {
     width: 170px; /* 고정된 너비 */
     height: 170px; /* 고정된 높이 */
@@ -212,6 +208,10 @@ body {
     color: #e74c3c; /* 가격 강조 */
     font-size: 18px;
     font-weight: bold;
+}
+
+.product:hover {
+    transform: scale(1.05); /* 제품에 마우스를 올리면 살짝 커지는 효과 */
 }
 
 /* 반응형 디자인 */
